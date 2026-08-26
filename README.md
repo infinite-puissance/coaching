@@ -1,1 +1,2 @@
-Techno-Shaman | Starseed Coach en Développement Personnel Holistique
+Techno-Shaman | Starseed
+Coach en Développement Personnel Holistique
