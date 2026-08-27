@@ -1,5 +1,5 @@
 ### Coaching
 
-##Techno-Shaman | Starseed
+## Techno-Shaman | Starseed
 
-#Consultant dans l'ascension de la Terre Mère
+# Consultant dans l'ascension de la Terre Mère
