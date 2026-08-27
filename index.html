@@ -2,13 +2,36 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/2-DEUXIEME-ESSAI-ALL-IN-ONE-FILE--AND--WITHOUT-BLOG/index.html">
-    <title>Infinite Puissance | Redirection</title>
+    <title>Coaching |Infinite Puissance | Redirection</title>
+    <!--
+      En production (Netlify) : le serveur lit le header Accept-Language
+      et redirige AVANT de servir cette page, via le fichier _redirects.
+      Cette page n'est donc jamais affichée sur Netlify.
+
+      En local (serveur simple type python http.server) : le serveur ne
+      gère pas les redirections conditionnelles, donc ce petit script JS
+      prend le relais. C'est le seul cas où il s'exécute.
+    -->
+    <script>
+        (function () {
+            var lang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+            var url;
+            if (lang.indexOf('fr') === 0) {
+                url = '/fr/index.html';
+            } else {
+                // Anglais par défaut pour toutes les autres langues
+                url = '/en/index.html';
+            }
+            window.location.replace(url);
+        })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/en/index.html">
 </head>
 <body>
-    <p>Redirection vers la version française...</p>
-    <script>
-        window.location.href = "/2-DEUXIEME-ESSAI-ALL-IN-ONE-FILE--AND--WITHOUT-BLOG/index.html";
-    </script>
+    <p>Redirection en cours… / Redirecting… / Redirigiendo…</p>
+    <p>
+        <a href="/fr/index.html">Français</a> ·
+        <a href="/en/index.html">English</a>
+    </p>
 </body>
 </html>

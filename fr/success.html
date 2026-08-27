@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci ! | Coaching | Infinite Puissance | Co-créer un monde harmonieux</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/images/logo-infinite-puissance.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/fr/index.html#hero" class="logo">
+                <span class="logo-text" style="color: #FFD700;font-size: 3.5rem">∞</span>
+                <span class="logo-text">Infinite Puissance</span>
+            </a>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navWrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-wrapper" id="navWrapper">
+                <nav>
+                    <ul>
+                        <li><a href="/fr/index.html#hero">Accueil</a></li>
+                        <li><a href="/fr/index.html#journey">Mon Voyage</a></li>
+                        <li><a href="/fr/index.html#mission">Ma Mission</a></li>
+                        <li><a href="/fr/index.html#coaching">Coaching</a></li>
+                        <li><a href="/fr/index.html#contact">Contact</a></li>
+                        <li><a href="https://infinite-puissance-ascension.netlify.app/">Ascension</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-selector">
+                    <a href="/fr/success.html#success" class="active">FR</a>
+                    <a href="/en/success.html#success">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SUCCESS Section -->
+        <section id="success" class="page-header">
+            <div class="success-symbols">
+                <div class="symbol merkaba-large"></div>
+                <div class="symbol fleur-de-vie"></div>
+            </div>
+            <div class="content-section">
+                <h1>✨</h1>
+                <h2>MERCI POUR VOTRE MESSAGE !</h2>
+                <p>
+                    Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais pour discuter de votre demande ou de votre soutien à la mission.
+                </p>
+                <p>
+                    En attendant, n'hésitez pas à explorer le reste du site pour en savoir plus sur mon travail de <strong>Techno-Shaman</strong> et <strong>Starseed</strong>.
+                </p>
+                <p><a href="/fr/index.html#hero" class="cta-button">Retour à l'Accueil</a></p>
+
+                <p><a href="/fr/index.html#contact" class="cta-button" style="margin-top: var(--spacing-sm);">Envoyer un autre message</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/fr/index.html#hero" class="logo">
+                    <span class="logo-text" style="color: #FFD700;font-size: 3.5rem">∞</span>
+                    <span class="logo-text">Infinite Puissance</span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <p class="socials">
+                    <a href="https://www.facebook.com/JeanChristophe.Houbre/" aria-label="Facebook Profile" target="_blank">
+                        <img src="/assets/images/Facebook_Logo_Secondary.png" alt="Facebook Logo">
+                    </a>
+                    <a href="https://www.instagram.com/jeanchristophe.houbre/" aria-label="Instagram Profile" target="_blank">
+                        <img src="/assets/images/Instagram_Glyph_White.png" alt="Instagram Logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jean-christophe-h-224909272/" aria-label="LinkedIn Profile" target="_blank">
+                        <img src="/assets/images/InBug-White.png" alt="LinkedIn Logo">
+                    </a>
+                </p>
+            </div>
+            <div class="footer-text">
+                © 2026 Infinite Puissance | Jean-Christophe Houbre - Techno-Shaman & Starseed
+                <br>
+                Consultant dans l'ascension de la Terre Mère
+                <br>
+                <small>Site co-créé avec Mistral et Claude (Anthropic), démonstration que la technologie peut être un outil d'éveil et de collaboration.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navWrapper = document.getElementById('navWrapper');
+
+            menuToggle.addEventListener('click', function () {
+                const isOpen = navWrapper.classList.toggle('active');
+                menuToggle.classList.toggle('active', isOpen);
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navWrapper.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navWrapper.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

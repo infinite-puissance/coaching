@@ -1,0 +1,19 @@
+# Redirections Netlify - Infinite Puissance
+# Placer ce fichier à la RACINE du dossier de publication
+
+
+# Français
+/  /fr/index.html  302  Language=fr
+# Toutes les autres langues → Anglais
+/  /en/index.html  302
+
+
+# --- 404 multilingue ---
+# Les URLs /en/ inexistantes → 404 anglaise
+/en/*   /en/404.html    404
+# Toutes les autres 404 → 404 française (racine)
+/*      /404.html   404
+
+
+# --- Formulaire de contact (FR) ---
+# La redirection est gérée par l'attribut action="/fr/success.html" dans le HTML

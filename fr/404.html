@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Introuvable | Coaching | Infinite Puissance | Co-créer un monde harmonieux</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/images/logo-infinite-puissance.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/fr/index.html#hero" class="logo">
+                <span class="logo-text" style="color: #FFD700;font-size: 3.5rem">∞</span>
+                <span class="logo-text">Infinite Puissance</span>
+            </a>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navWrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-wrapper" id="navWrapper">
+                <nav>
+                    <ul>
+                        <li><a href="/fr/index.html#hero">Accueil</a></li>
+                        <li><a href="/fr/index.html#journey">Mon Voyage</a></li>
+                        <li><a href="/fr/index.html#mission">Ma Mission</a></li>
+                        <li><a href="/fr/index.html#coaching">Coaching</a></li>
+                        <li><a href="/fr/index.html#contact">Contact</a></li>
+                        <li><a href="https://infinite-puissance-ascension.netlify.app/">Ascension</a></li>
+                    </ul>
+                </nav>
+                <div class="lang-selector">
+                    <a href="/fr/index.html" class="active">FR</a>
+                    <a href="/en/index.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 404 Section -->
+        <section id="not-found" class="page-header" style="min-height: 70vh; display: flex; align-items: center; justify-content: center;">
+            <div class="error-symbols">
+                <div class="symbol merkaba-large"></div>
+                <div class="symbol oeil-horus"></div>
+            </div>
+            <div class="content-section" style="z-index: 2; position: relative;">
+                <h1 style="font-size: 6rem; color: #FFD700; text-align: center; margin-bottom: 0.5rem; text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);">404</h1>
+                <h2 style="border-bottom: none; text-align: center;">Cette page s'est évanouie dans la matrice</h2>
+                <p style="text-align: center; font-size: 1.15rem; max-width: 600px; margin: 0 auto var(--spacing-medium);">
+                    Comme dans toute traversée spirituelle, il arrive de perdre son chemin.
+                    Ce n'est pas une erreur, mais une <strong>invitation à se recentrer</strong>.
+                </p>
+                <p style="text-align: center; font-size: 1.15rem; max-width: 600px; margin-bottom: var(--spacing-large);">
+                    La page que vous cherchez n'existe plus, ou n'a jamais existé dans cette dimension.
+                    Mais rassurez-vous, le chemin du retour est toujours ouvert à celui qui garde l'intention.
+                </p>
+                <p style="text-align: center;">
+                    <a href="/fr/index.html#hero" class="cta-button">Retrouver le Chemin</a>
+                </p>
+                <p style="text-align: center; margin-top: var(--spacing-small);">
+                    <a href="/fr/index.html#contact" class="cta-button" style="background-color: transparent; color: var(--color-text-light);">Me Contacter</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/fr/index.html#hero" class="logo">
+                    <span class="logo-text" style="color: #FFD700;font-size: 3.5rem">∞</span>
+                    <span class="logo-text">Infinite Puissance</span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <p class="socials">
+                    <a href="https://www.facebook.com/JeanChristophe.Houbre/" aria-label="Facebook Profile" target="_blank">
+                        <img src="/assets/images/Facebook_Logo_Secondary.png" alt="Facebook Logo">
+                    </a>
+                    <a href="https://www.instagram.com/jeanchristophe.houbre/" aria-label="Instagram Profile" target="_blank">
+                        <img src="/assets/images/Instagram_Glyph_White.png" alt="Instagram Logo">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jean-christophe-h-224909272/" aria-label="LinkedIn Profile" target="_blank">
+                        <img src="/assets/images/InBug-White.png" alt="LinkedIn Logo">
+                    </a>
+                </p>
+            </div>
+            <div class="footer-text">
+                © 2026 Infinite Puissance | Jean-Christophe Houbre - Techno-Shaman & Starseed
+                <br>
+                Consultant dans l'ascension de la Terre Mère
+                <br>
+                <small>Site co-créé avec Mistral et Claude (Anthropic), démonstration que la technologie peut être un outil d'éveil et de collaboration.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navWrapper = document.getElementById('navWrapper');
+
+            menuToggle.addEventListener('click', function () {
+                const isOpen = navWrapper.classList.toggle('active');
+                menuToggle.classList.toggle('active', isOpen);
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            navWrapper.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navWrapper.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
